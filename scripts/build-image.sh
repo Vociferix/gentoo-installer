@@ -26,6 +26,7 @@ emerge \
     app-admin/hddtemp \
     app-admin/sudo \
     app-arch/p7zip \
+    app-arch/zip \
     app-cdr/xfburn \
     app-editors/emacs \
     app-editors/mousepad \
@@ -40,7 +41,7 @@ emerge \
     app-portage/mirrorselect \
     app-text/wgetpaste \
     gnome-extra/nm-applet \
-    mail-client/thunderbird-bin \
+    mail-client/thuderbird-bin \
     media-gfx/fbgrab \
     media-sound/alsa-utils \
     media-sound/pavucontrol \
@@ -148,8 +149,9 @@ systemctl enable systemd-resolved.service || exit 1
 
 useradd -G users,wheel,audio,cdrom,usb,video,plugdev,vboxguest -s /bin/bash user
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-cd /home/user && tar xvf /tmp/user.tar.xz && chown -R user:user /home/user && cd /
-mkdir -p /usr/share/backgrounds/gentoo
-mv /tmp/background.jpg /usr/share/backgrounds/gentoo/gentoo.jpg
+mv /tmp/user/.config /home/user/.config && chown -R user:user /home/user/.config
+mv /tmp/user/.mozilla /home/user/.mozilla && chown -R user:user /home/user/.mozilla
+mv /tmp/user/Desktop /home/user/Desktop && chown -R user:user /home/user/Desktop
+mv /tmp/background.png /usr/share/backgrounds/gentoo.png
 
 

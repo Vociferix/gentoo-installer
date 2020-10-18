@@ -5,9 +5,7 @@ rm -rf \
     /tmp/* \
     /usr/portage/distfiles/* \
     /usr/src/* \
-    /var/cache/edb/dep/* \
-    /var/cache/genkernel/* \
-    /var/cache/portage/distfiles/* \
+    /var/cache/* \
     /var/empty/* \
     /var/run/* \
     /var/state/* \
