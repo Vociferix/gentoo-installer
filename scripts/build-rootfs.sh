@@ -23,9 +23,6 @@ cp ${BASEDIR}/conf/50-dhcp.network ${BASEDIR}/rootfs/tmp/ || exit 1
 cp ${BASEDIR}/conf/squashfs.conf ${BASEDIR}/rootfs/tmp/ || exit 1
 cp -r ${BASEDIR}/conf/user ${BASEDIR}/rootfs/tmp/user || exit 1
 cp ${BASEDIR}/assets/background.png ${BASEDIR}/rootfs/tmp/ || exit 1
-mkdir -p ${BASEDIR}/rootfs/opt/installer || exit 1
-cp ${BASEDIR}/main.py ${BASEDIR}/rootfs/opt/installer/ || exit 1
-cp -r ${BASEDIR}/installer ${BASEDIR}/rootfs/opt/installer/installer || exit 1
 
 ${BASEDIR}/scripts/prepare-chroot.sh || exit 1
 chroot ${BASEDIR}/rootfs /tmp/build-image.sh "$MIRROR"

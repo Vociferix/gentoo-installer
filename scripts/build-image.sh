@@ -22,6 +22,7 @@ emerge gentoo-kernel || exit 1
 
 emerge --depclean || exit 1
 echo "x11-libs/libdrm libkms" >> /etc/portage/package.use/plymouth
+echo "sys-block/gparted btrfs cyrptsetup dmraid f2fs fat hfs jfs mdadm ntfs reiser4 reiserfs udf xfs" > /etc/portage/package.use/gparted
 emerge \
     app-admin/hddtemp \
     app-admin/sudo \
@@ -40,6 +41,7 @@ emerge \
     app-portage/gentoolkit \
     app-portage/mirrorselect \
     app-text/wgetpaste \
+    dev-python/pyparted \
     gnome-extra/nm-applet \
     mail-client/thuderbird-bin \
     media-gfx/fbgrab \
@@ -74,6 +76,7 @@ emerge \
     sys-apps/pcmciautils \
     sys-apps/sdparm \
     sys-apps/usbutils \
+    sys-block/gparted \
     sys-block/parted \
     sys-block/partimage \
     sys-boot/plymouth \

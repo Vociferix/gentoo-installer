@@ -4,7 +4,7 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
 from installer.page import Page
-from installer.finished import Finished
+from installer.disk_setup import DiskSetup
 
 
 class Welcome(Page):
@@ -29,7 +29,7 @@ class Welcome(Page):
         self.buttons.pack_start(self.close_button, True, False, 5)
 
     def on_begin_clicked(self, widget):
-        self.next_page(Finished)
+        self.next_page(DiskSetup)
 
     def on_close_clicked(self, widget):
         Gtk.main_quit()

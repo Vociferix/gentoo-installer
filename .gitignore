@@ -2,3 +2,5 @@
 cdroot/*
 rootfs/*
 stage3*.tar.xz
+*.pyc
+__pycache__/**

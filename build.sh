@@ -17,5 +17,9 @@ RET=$?
 ${BASEDIR}/scripts/cleanup-chroot.sh || exit 1
 [ "$RET" == 0 ] || exit 1
 
+mkdir -p ${BASEDIR}/rootfs/opt/installer
+cp -r ${BASEDIR}/installer ${BASEDIR}/rootfs/opt/installer/installer
+cp ${BASEDIR}/main.py ${BASEDIR}/rootfs/opt/installer/
+
 ${BASEDIR}/scripts/mkiso.sh
 
